@@ -1,0 +1,15 @@
+name: hellow world
+
+on:
+  push:
+    branches:  [main] 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest    
+    steps:     
+       - uses: actions/setup-node@v4
+         with:
+           node-version: 19
+       - name: hellow
+         run: node index.js
